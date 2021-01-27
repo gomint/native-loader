@@ -1,5 +1,5 @@
 module gomint.nativeloader {
-    requires oshi.core;
+    requires com.github.oshi;
 
     exports io.gomint.nativeloader;
 }
