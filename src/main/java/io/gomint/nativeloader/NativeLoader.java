@@ -43,14 +43,14 @@ public class NativeLoader {
 
     public boolean load(String library, ClassLoader classLoader) {
         // Check if this setup is supported
-        if (!this.supportMatrix.contains(new SupportPair(SystemInfo.getCurrentPlatformEnum(),
+        if (!this.supportMatrix.contains(new SupportPair(SystemInfo.getCurrentPlatform(),
                 System.getProperty("os.arch")))) {
             return false;
         }
 
         // Construct the full library name
-        String ending = "." + LIBRARY_SUFFIXES.get(SystemInfo.getCurrentPlatformEnum());
-        String fullName = SystemInfo.getCurrentPlatformEnum().name().toLowerCase() + "_" + library + "_" +
+        String ending = "." + LIBRARY_SUFFIXES.get(SystemInfo.getCurrentPlatform());
+        String fullName = SystemInfo.getCurrentPlatform().name().toLowerCase() + "_" + library + "_" +
                 System.getProperty("os.arch");
 
         // Get the input from either the jar or filesystem and copy it to a temp then load it
