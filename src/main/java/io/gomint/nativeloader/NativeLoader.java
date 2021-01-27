@@ -26,7 +26,7 @@ public class NativeLoader {
 
     private static final EnumMap<PlatformEnum, String> LIBRARY_SUFFIXES = new EnumMap<>(PlatformEnum.class) {{
         put(PlatformEnum.LINUX, "so");
-        put(PlatformEnum.MACOSX, "dylib");
+        put(PlatformEnum.MACOS, "dylib");
         put(PlatformEnum.WINDOWS, "dll");
     }};
 
